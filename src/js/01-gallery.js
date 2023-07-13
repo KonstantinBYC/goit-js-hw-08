@@ -28,23 +28,3 @@ let lightbox = new SimpleLightbox('.gallery__link', {
   captionsData: 'alt',
   captionDelay: 250,
 });
-
-listElements.addEventListener('click', event => {
-  event.preventDefault();
-  lightbox.open();
-});
-
-listElements.addEventListener('click', onClick);
-
-function onClick(e) {
-  e.preventDefault();
-
-  if (e.target.classList.contains('gallery')) return;
-  const source = e.target.dataset.source;
-  const instance = simpleLightbox.create(
-    `<img src="${source}" width="800" height="600">`
-  );
-  instance.show();
-}
-
-console.log(galleryItems);
