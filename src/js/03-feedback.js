@@ -33,9 +33,9 @@ formEl.addEventListener('submit', e => {
     message: messageInput.value,
   });
 
-  formEl.currentTarget.reset();
+  formEl.reset();
   localStorage.removeItem('feedback-form-state');
-  submitButton.enabled = true;
+  submitButton.disabled = true;
 });
 
 // let formData = JSON.parse(localStorage.getItem(LOCAL_KEY)) || {};
